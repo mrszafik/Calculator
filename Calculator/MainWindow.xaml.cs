@@ -26,58 +26,58 @@ namespace Calculator
         }
 
         private string _number1_String, _number2_String;
-        private long _result, _number1, _number2;
+        private double _result, _number1, _number2;
         private char _chosenAction;
         private Boolean _nextNumber = false;
 
         private void ButtonOne_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(1);
+            DisplayNumber("1");
         }
 
         private void ButtonTwo_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(2);
+            DisplayNumber("2");
         }
 
         private void ButtonThree_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(3);
+            DisplayNumber("3");
         }
 
         private void ButtonFour_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(4);
+            DisplayNumber("4");
         }
 
         private void ButtonFive_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(5);
+            DisplayNumber("5");
         }
 
         private void ButtonSix_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(6);
+            DisplayNumber("6");
         }
 
         private void ButtonSeven_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(7);
+            DisplayNumber("7");
         }
 
         private void ButtonEight_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(8);
+            DisplayNumber("8");
         }
 
         private void ButtonNine_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(9);
+            DisplayNumber("9");
         }
 
         private void ButtonZero_Click(object sender, RoutedEventArgs e)
         {
-            DisplayNumber(0);
+            DisplayNumber("0");
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -101,6 +101,19 @@ namespace Calculator
             _chosenAction = '-';
         }
 
+        private void ButtonComma_Click(object sender, RoutedEventArgs e)
+        {
+            DisplayNumber(",");
+        }
+
+        private void ButtonChangeSign_Click(object sender, RoutedEventArgs e)
+        {
+            _number1 = double.Parse(_number1_String);
+            _number1 = _number1 * (-1.0);
+            _number1_String = _number1.ToString();
+            Display.Text = _number1_String;
+        }
+
         private void ButtonDiv_Click(object sender, RoutedEventArgs e)
         {
             Display.Text = "";
@@ -110,24 +123,25 @@ namespace Calculator
 
         private void ButtonEqual_Click(object sender, RoutedEventArgs e)
         {
-            _number1 = int.Parse(_number1_String);
-            _number2 = int.Parse(_number2_String);
+            _number1 = double.Parse(_number1_String);
+            _number2 = double.Parse(_number2_String);
             switch (_chosenAction)
             {
                 case ('+'):
-                    _result = _number1 + _number2;
+                    _result = Math.Round(_number1 + _number2, 3);
+
                     break;
 
                 case ('-'):
-                    _result = _number1 - _number2;
+                    _result = Math.Round(_number1 - _number2, 3);
                     break;
 
                 case ('*'):
-                    _result = _number1 * _number2;
+                    _result = Math.Round(_number1 * _number2, 3);
                     break;
 
                 case ('/'):
-                    _result = _number1 / _number2;
+                    _result = Math.Round(_number1 / _number2, 3);
                     break;
                 case (' '):
                     break;
@@ -139,7 +153,7 @@ namespace Calculator
             _number2_String = " ";
         }
 
-        private void DisplayNumber(int number)
+        private void DisplayNumber(string number)
         {
             if (!_nextNumber)
             {

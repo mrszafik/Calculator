@@ -19,6 +19,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0"
@@ -92,12 +93,26 @@
                 Content="9"
                 FontSize="30" Click="ButtonNine_Click"/>
 
-        <Button Grid.Column="3"
-                Grid.Row="3"
+        <Button Grid.Column="1"
+                Grid.Row="4"
                 Margin="3"
                 x:Name="ButtonZero"
                 Content="0"
                 FontSize="30" Click="ButtonZero_Click"/>
+        
+        <Button Grid.Column="2"
+                Grid.Row="4"
+                Margin="3"
+                x:Name="ButtonComma"
+                Content=","
+                FontSize="30" Click="ButtonComma_Click"/>
+
+        <Button Grid.Column="0"
+                Grid.Row="4"
+                Margin="3"
+                x:Name="ButtonChangeSign"
+                Content="+/-"
+                FontSize="30" Click="ButtonChangeSign_Click"/>
 
         <Button Grid.Column="3"
                 Grid.Row="1"
@@ -127,8 +142,10 @@
                 Content="/"
                 FontSize="30" Click="ButtonDiv_Click"/>
 
-        <Button Grid.Column="4"
+        <Button Grid.Column="3"
                 Grid.Row="3"
+                Grid.ColumnSpan="5"
+                Grid.RowSpan="4"
                 Margin="3"
                 x:Name="ButtonEqual"
                 Content="="
