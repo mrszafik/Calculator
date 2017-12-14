@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="350" Width="400">
+        Title="Calculator" Height="400" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -20,10 +20,19 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0"
                    Grid.Row="0"
+                   Grid.ColumnSpan="5"
+                   Height="20"
+                   x:Name="Memory"
+                   FontSize="15"
+                   TextAlignment="Right"/>
+
+        <TextBlock Grid.Column="0"
+                   Grid.Row="1"
                    Grid.ColumnSpan="5"
                    Height="50"
                    x:Name="Display"
@@ -31,119 +40,119 @@
                    TextAlignment="Right"/>
 
         <Button Grid.Column="0"
-                Grid.Row="1"
+                Grid.Row="2"
                 Margin="3"
                 x:Name="ButtonOne"
                 Content="1"
                 FontSize="30" Click="ButtonOne_Click"/>
 
         <Button Grid.Column="1"
-                Grid.Row="1"
+                Grid.Row="2"
                 Margin="3"
                 x:Name="ButtonTwo"
                 Content="2"
                 FontSize="30" Click="ButtonTwo_Click"/>
 
         <Button Grid.Column="2"
-                Grid.Row="1"
+                Grid.Row="2"
                 Margin="3"
                 x:Name="ButtonThree" 
                 Content="3"
                 FontSize="30" Click="ButtonThree_Click"/>
 
         <Button Grid.Column="0"
-                Grid.Row="2"
+                Grid.Row="3"
                 Margin="3"
                 x:Name="ButtonFour"
                 Content="4"
                 FontSize="30" Click="ButtonFour_Click"/>
 
         <Button Grid.Column="1"
-                Grid.Row="2"
+                Grid.Row="3"
                 Margin="3"
                 x:Name="ButtonFive"
                 Content="5"
                 FontSize="30" Click="ButtonFive_Click"/>
 
         <Button Grid.Column="2"
-                Grid.Row="2"
+                Grid.Row="3"
                 Margin="3"
                 x:Name="ButtonSix"
                 Content="6"
                 FontSize="30" Click="ButtonSix_Click"/>
 
         <Button Grid.Column="0"
-                Grid.Row="3"
+                Grid.Row="4"
                 Margin="3"
                 x:Name="ButtonSeven"
                 Content="7"
                 FontSize="30" Click="ButtonSeven_Click"/>
 
         <Button Grid.Column="1"
-                Grid.Row="3"
+                Grid.Row="4"
                 Margin="3"
                 x:Name="ButtonEight"
                 Content="8"
                 FontSize="30" Click="ButtonEight_Click"/>
 
         <Button Grid.Column="2"
-                Grid.Row="3"
+                Grid.Row="4"
                 Margin="3"
                 x:Name="ButtonNine"
                 Content="9"
                 FontSize="30" Click="ButtonNine_Click"/>
 
         <Button Grid.Column="1"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="3"
                 x:Name="ButtonZero"
                 Content="0"
                 FontSize="30" Click="ButtonZero_Click"/>
         
         <Button Grid.Column="2"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="3"
                 x:Name="ButtonComma"
                 Content=","
                 FontSize="30" Click="ButtonComma_Click"/>
 
         <Button Grid.Column="0"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="3"
                 x:Name="ButtonChangeSign"
                 Content="+/-"
                 FontSize="30" Click="ButtonChangeSign_Click"/>
 
         <Button Grid.Column="3"
-                Grid.Row="1"
+                Grid.Row="2"
                 Margin="3"
                 x:Name="ButtonAdd"
                 Content="+"
                 FontSize="30" Click="ButtonAdd_Click"/>
 
         <Button Grid.Column="4"
-                Grid.Row="1"
+                Grid.Row="2"
                 Margin="3"
                 x:Name="ButtonSubb"
                 Content="-"
                 FontSize="30" Click="ButtonSubb_Click"/>
 
         <Button Grid.Column="3"
-                Grid.Row="2"
+                Grid.Row="3"
                 Margin="3"
                 x:Name="ButtonMul"
                 Content="X"
                 FontSize="30" Click="ButtonMul_Click"/>
 
         <Button Grid.Column="4"
-                Grid.Row="2"
+                Grid.Row="3"
                 Margin="3"
                 x:Name="ButtonDiv"
                 Content="/"
                 FontSize="30" Click="ButtonDiv_Click"/>
 
         <Button Grid.Column="3"
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.ColumnSpan="5"
                 Grid.RowSpan="4"
                 Margin="3"
